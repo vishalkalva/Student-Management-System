@@ -1,0 +1,41 @@
+# Student Management System (Version 1)
+sms=[]
+while True:
+    print("\n1. Add Student")
+    print("2. View Students")
+    print("3. Search Student")
+    print("4. Update Student")
+    print("5. Delete Student")
+    print("6. Exit")
+    choice = int(input("Enter your choice: "))
+
+    if(choice==1):
+        id=int(input("enter student id:"))    
+        student=input("enter student name:")
+        age=int(input("enter student age:"))  
+        marks= int(input("enter student marks:"))
+        record={}
+        record.update({"id":id})
+        record.update({"student":student})
+        record.update({"age":age})
+        record.update({"marks":marks})
+        sms.append(record)
+        print(sms)
+    elif(choice==2):
+        print(sms)
+        for student in sms:
+            print(student)
+    elif(choice==3):
+        found = False
+        id=(int(input("enter student id :")))
+        for student in sms:
+            if student["id"] == id:
+                print(student)  
+                found = True 
+        if not found:
+            print("not found")        
+    elif(choice==6):
+        print("thank you ")
+        break
+    else:
+        print("Invalid choice! Please enter a number between 1 and 6.")
