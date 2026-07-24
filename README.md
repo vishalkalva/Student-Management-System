@@ -1,8 +1,8 @@
-# 🎓 Student Management System (Version 1)
+🎓 Student Management System (Version 1)
 
 A simple menu-driven Student Management System built using Python. This project helps manage student records using lists, dictionaries, functions, and loops.
 
-## 🚀 Features
+🚀 Features
 
 - ➕ Add Student
 - 📋 View Students
@@ -11,7 +11,7 @@ A simple menu-driven Student Management System built using Python. This project 
 - 🗑️ Delete Student
 - 🚪 Exit Program
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 
 - Python 3
 - Lists
@@ -20,13 +20,13 @@ A simple menu-driven Student Management System built using Python. This project 
 - Loops
 - Conditional Statements
 
-## 📂 Project Structure
+📂 Project Structure
 
 ```
 StudentManagementSystem.py
 ```
 
-## 📸 Menu
+📸 Menu
 
 ```
 1. Add Student
@@ -37,7 +37,7 @@ StudentManagementSystem.py
 6. Exit
 ```
 
-## 💡 Concepts Practiced
+💡 Concepts Practiced
 
 - Variables
 - User Input
@@ -48,7 +48,7 @@ StudentManagementSystem.py
 - If-Else Statements
 - CRUD Operations
 
-## ▶️ How to Run
+▶️ How to Run
 
 1. Install Python 3.
 2. Download the project.
@@ -59,7 +59,7 @@ StudentManagementSystem.py
 python StudentManagementSystem.py
 ```
 
-## 📌 Sample Student Record
+📌 Sample Student Record
 
 ```python
 {
@@ -70,7 +70,7 @@ python StudentManagementSystem.py
 }
 ```
 
-## 🎯 Future Improvements (Version 2)
+🎯 Future Improvements (Version 2)
 
 - Save data using File Handling
 - Prevent duplicate student IDs
@@ -78,9 +78,9 @@ python StudentManagementSystem.py
 - Better formatted output
 - Export records to CSV
 
-## 👨‍💻 Author
+👨‍💻 Author
 
-**Vishal Kalva**
+Vishal Kalva
 
 🌱 Beginner Python Developer
 
