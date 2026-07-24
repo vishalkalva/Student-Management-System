@@ -1,5 +1,45 @@
-# Student Management System (Version 1)
 sms=[]
+def search_student():
+        found = False
+        entered_id = int(input("Enter student ID: "))
+
+        for student in sms:
+                if student["id"] == entered_id:
+                    print(student)
+                    found = True
+                    break
+
+        if not found:
+            print("Student not found")
+def update_student():
+    found = False
+    entered_id = int(input("Enter student ID to update: "))
+
+    for student in sms:
+        if student["id"] == entered_id:
+            student["student"] = input("Enter new student name: ")
+            student["age"] = int(input("Enter new student age: "))
+            student["marks"] = int(input("Enter new student marks: "))
+
+            print("Student updated successfully")
+            found = True
+            break
+
+    if not found:
+        print("Student not found")            
+def delete_student():
+    found = False
+    entered_id = int(input("Enter student ID to delete: "))
+
+    for student in sms:
+        if student["id"] == entered_id:
+            sms.remove(student)
+            print("Student deleted successfully")
+            found = True
+            break
+
+    if not found:
+        print("Student not found")           
 while True:
     print("\n1. Add Student")
     print("2. View Students")
@@ -26,14 +66,12 @@ while True:
         for student in sms:
             print(student)
     elif(choice==3):
-        found = False
-        id=(int(input("enter student id :")))
-        for student in sms:
-            if student["id"] == id:
-                print(student)  
-                found = True 
-        if not found:
-            print("not found")        
+        search_student()
+    
+    elif(choice == 4):
+      update_student()  
+    elif(choice == 5):
+      delete_student() 
     elif(choice==6):
         print("thank you ")
         break
