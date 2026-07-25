@@ -1,22 +1,42 @@
-sms=[]
+# ================================
+# Student Management System (Version 1)
+# ================================
+
+# List to store all student records
+sms = []
+
+
+# -------------------------------
+# Search Student
+# -------------------------------
 def search_student():
-        found = False
-        entered_id = int(input("Enter student ID: "))
+    found = False
+    entered_id = int(input("Enter student ID: "))
 
-        for student in sms:
-                if student["id"] == entered_id:
-                    print(student)
-                    found = True
-                    break
+    # Search for the student by ID
+    for student in sms:
+        if student["id"] == entered_id:
+            print(student)
+            found = True
+            break
 
-        if not found:
-            print("Student not found")
+    # If no student is found
+    if not found:
+        print("Student not found")
+
+
+# -------------------------------
+# Update Student
+# -------------------------------
 def update_student():
     found = False
     entered_id = int(input("Enter student ID to update: "))
 
+    # Search for the student by ID
     for student in sms:
         if student["id"] == entered_id:
+
+            # Update student details
             student["student"] = input("Enter new student name: ")
             student["age"] = int(input("Enter new student age: "))
             student["marks"] = int(input("Enter new student marks: "))
@@ -25,55 +45,110 @@ def update_student():
             found = True
             break
 
+    # If student ID does not exist
     if not found:
-        print("Student not found")            
+        print("Student not found")
+
+
+# -------------------------------
+# Delete Student
+# -------------------------------
 def delete_student():
     found = False
     entered_id = int(input("Enter student ID to delete: "))
 
+    # Search for the student by ID
     for student in sms:
         if student["id"] == entered_id:
+
+            # Remove student from the list
             sms.remove(student)
             print("Student deleted successfully")
             found = True
             break
 
+    # If student ID does not exist
     if not found:
-        print("Student not found")           
+        print("Student not found")
+
+
+# ================================
+# Main Menu
+# ================================
 while True:
+
+    # Display menu
     print("\n1. Add Student")
     print("2. View Students")
     print("3. Search Student")
     print("4. Update Student")
     print("5. Delete Student")
     print("6. Exit")
+
     choice = int(input("Enter your choice: "))
 
-    if(choice==1):
-        id=int(input("enter student id:"))    
-        student=input("enter student name:")
-        age=int(input("enter student age:"))  
-        marks= int(input("enter student marks:"))
-        record={}
-        record.update({"id":id})
-        record.update({"student":student})
-        record.update({"age":age})
-        record.update({"marks":marks})
+    # -------------------------------
+    # Add Student
+    # -------------------------------
+    if choice == 1:
+
+        student_id = int(input("Enter student ID: "))
+        student_name = input("Enter student name: ")
+        age = int(input("Enter student age: "))
+        marks = int(input("Enter student marks: "))
+
+        # Create a dictionary for one student
+        record = {
+            "id": student_id,
+            "student": student_name,
+            "age": age,
+            "marks": marks
+        }
+
+        # Add student to the list
         sms.append(record)
-        print(sms)
-    elif(choice==2):
-        print(sms)
-        for student in sms:
-            print(student)
-    elif(choice==3):
+
+        print("Student added successfully!")
+
+    # -------------------------------
+    # View Students
+    # -------------------------------
+    elif choice == 2:
+
+        if not sms:
+            print("No student records found.")
+        else:
+            print("\nStudent Records")
+            for student in sms:
+                print(student)
+
+    # -------------------------------
+    # Search Student
+    # -------------------------------
+    elif choice == 3:
         search_student()
-    
-    elif(choice == 4):
-      update_student()  
-    elif(choice == 5):
-      delete_student() 
-    elif(choice==6):
-        print("thank you ")
+
+    # -------------------------------
+    # Update Student
+    # -------------------------------
+    elif choice == 4:
+        update_student()
+
+    # -------------------------------
+    # Delete Student
+    # -------------------------------
+    elif choice == 5:
+        delete_student()
+
+    # -------------------------------
+    # Exit Program
+    # -------------------------------
+    elif choice == 6:
+        print("Thank you for using Student Management System!")
         break
+
+    # -------------------------------
+    # Invalid Choice
+    # -------------------------------
     else:
         print("Invalid choice! Please enter a number between 1 and 6.")
