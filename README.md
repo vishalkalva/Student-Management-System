@@ -1,4 +1,4 @@
-# 🎓 Student Management System (Version 1)
+🎓 Student Management System (Version 1)
 
 A simple **menu-driven Student Management System** built using **Python**. This project allows users to manage student records by performing basic CRUD (Create, Read, Update, Delete) operations.
 
@@ -6,7 +6,7 @@ It was developed as a beginner Python project to practice core programming conce
 
 ---
 
-## ✨ Features
+✨ Features
 
 - ➕ Add Student
 - 📋 View All Students
@@ -17,7 +17,7 @@ It was developed as a beginner Python project to practice core programming conce
 
 ---
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 
 - Python 3
 - Lists
@@ -28,7 +28,7 @@ It was developed as a beginner Python project to practice core programming conce
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 
 ```
 StudentManagementSystem.py
@@ -37,7 +37,7 @@ README.md
 
 ---
 
-## 📌 Student Record Format
+📌 Student Record Format
 
 Each student is stored as a dictionary.
 
@@ -52,7 +52,7 @@ Each student is stored as a dictionary.
 
 ---
 
-## 📋 Menu
+📋 Menu
 
 ```
 1. Add Student
@@ -65,7 +65,7 @@ Each student is stored as a dictionary.
 
 ---
 
-## ▶️ How to Run
+▶️ How to Run
 
 1. Install Python 3 on your computer.
 2. Clone this repository or download the project.
@@ -78,7 +78,7 @@ python StudentManagementSystem.py
 
 ---
 
-## 📚 Concepts Practiced
+📚 Concepts Practiced
 
 - Variables
 - User Input
@@ -92,7 +92,7 @@ python StudentManagementSystem.py
 
 ---
 
-## 📷 Example
+📷 Example
 
 ```
 1. Add Student
@@ -106,7 +106,7 @@ Student added successfully!
 
 ---
 
-## 🚀 Future Improvements (Version 2)
+🚀 Future Improvements (Version 2)
 
 - 💾 Save data using File Handling
 - 📂 Load records automatically when the program starts
@@ -117,7 +117,7 @@ Student added successfully!
 
 ---
 
-## 🎯 Learning Outcome
+🎯 Learning Outcome
 
 By completing this project, I learned how to:
 
@@ -130,7 +130,7 @@ By completing this project, I learned how to:
 
 ---
 
-## 👨‍💻 Author
+👨‍💻 Author
 
 **Vishal Kalva**
 
